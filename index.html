@@ -44,6 +44,19 @@
     </nav>
 
     <main>
+        <!-- Modal container for displaying modal contents -->
+        <div class="modal" id="modalContainer">
+            <div class="modal-content">
+                <div class="modal-close" onclick="closeModal()">
+                    <i class="fa-solid fa-square-xmark"></i>
+                </div>
+                <div id="modalContent">
+                    <h3>Content Item 1</h3>
+                    <p>This is the description for Content Item 1.</p>
+                </div>
+            </div>
+        </div>
+
         <section id="about">
             <h2><i class="fas fa-user"></i> About Me</h2>
             <p>I am a Senior Lecturer in Computer Science and Engineering with over 15 years of experience in academia
@@ -55,17 +68,29 @@
         <section id="courses">
             <h2><i class="fas fa-chalkboard-teacher"></i> Courses</h2>
             <div class="course-grid">
-                <div class="course-card">
+                <div class="course-card" onclick="displayOnModal(this)">
                     <h3>CS301: Advanced Algorithms</h3>
                     <p>Graduate-level course covering complex algorithms and their applications.</p>
+                    <div class="modal-candidate">
+                        <h1> CS301: Advanced Algorithms </h1>
+                        <p> Graduate-level course covering complex algorithms and their applications. Some more placeholder description can be put here. </p>
+                    </div>
                 </div>
-                <div class="course-card">
+                <div class="course-card" onclick="displayOnModal(this)">
                     <h3>CS202: Machine Learning</h3>
                     <p>Introduction to machine learning concepts and implementations.</p>
+                    <div class="modal-candidate">
+                        <h1> Placeholder Title </h1>
+                        <p> Placeholder description. </p>
+                    </div>
                 </div>
-                <div class="course-card">
+                <div class="course-card" onclick="displayOnModal(this)">
                     <h3>ENG405: Distributed Systems</h3>
                     <p>Advanced topics in distributed computing and system design.</p>
+                    <div class="modal-candidate">
+                        <h1> Placeholder Title </h1>
+                        <p> Placeholder description. </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -100,14 +125,14 @@
 
         <section id="contact">
             <h2><i class="fas fa-envelope"></i> Contact</h2>
-            <p>Email: sarah.chen@stanford.edu</p>
-            <p>Office: Gates Building, Room 388</p>
-            <p>Office Hours: Monday and Wednesday, 2-4 PM</p>
+            <p>Email: ishrakabedin@iut-dhaka.edu</p>
+            <p>Office: 2nd Academic Building, Room 503</p>
+            <p>Office Hours: Wednesday and Friday, 2:30-3:30 PM</p>
         </section>
     </main>
 
     <footer>
-        <p>Dr. Sarah Chen © 2024</p>
+        <p>Mohammad Ishrak Abedin © 2024</p>
         <div class="contact-links">
             <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
