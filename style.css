@@ -174,13 +174,13 @@
      height: 100%;
      overflow: auto;
      /* background-color: rgba(0, 0, 0, 0.5); */
-     backdrop-filter: blur(20px) brightness(70%) contrast(120%);
+     backdrop-filter: blur(10px) brightness(80%) contrast(100%);
  }
 
  .modal-content {
     position: relative;
     background-color: var(--background);
-    margin: 15% auto;
+    margin: 15vh auto;
     padding: 20px;
     border: 1px solid var(--border);
     width: 80%;
