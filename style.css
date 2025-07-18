@@ -63,7 +63,7 @@ html {
 .theme-toggle:hover {
     transform: translateY(-2px);
     /* animation: subtlePulse 1.0s ease-in-out infinite; */
-    animation: borderFlow 1.0s ease-in-out infinite;
+    animation: borderFlow 1.5s ease-in-out infinite;
 }
 
 /* Existing animations */
