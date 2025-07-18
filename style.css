@@ -489,6 +489,14 @@ h2::after {
     /* Horizontal alignment */
 }
 
+.skill-item i, .ifix {
+    font-size: 2.5rem;
+}
+
+.skill-item .ifix {
+    font-size: 2.2rem;
+}
+
 .skill-item:hover {
     transform: translateY(-3px);
     /* animation: glitch 0.3s infinite; */
