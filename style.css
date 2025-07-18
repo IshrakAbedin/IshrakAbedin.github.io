@@ -335,8 +335,9 @@ header::before {
 }
 
 nav {
-    /* background-color: transparent; */
-    background-color: var(--background);
+    background-color: transparent;
+    backdrop-filter: blur(10px) brightness(100%) contrast(98%);
+    /* background-color: var(--background); */
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -346,7 +347,7 @@ nav {
 }
 
 nav ul {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     list-style: none;
     display: flex;
@@ -363,6 +364,7 @@ nav a {
     transition: color 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 nav a::before {
@@ -576,7 +578,40 @@ footer {
         text-align: center;
     }
 
-    nav ul {
+    /* nav ul {
         flex-wrap: wrap;
+    } */
+    nav {
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        max-width: none;
+        margin: 0;
+        justify-content: flex-start;
+        gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.5rem 1rem;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav li {
+        flex-shrink: 0;
+    }
+
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
     }
 }

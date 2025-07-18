@@ -7,6 +7,28 @@
     <title>Mohammad Ishrak Abedin - Lecturer, CSE, IUT</title>
     <link rel="icon" href="resource/Icon.svg" type="image/svg+xml">
 
+    <!-- Automatically apply theme based on system preference -->
+    <script>
+        function getSystemTheme() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
+            return 'light';
+        }
+
+        function getInitialTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            return getSystemTheme();
+        }
+
+        // Initialize immediately to prevent flash
+        const initialTheme = getInitialTheme();
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    </script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
