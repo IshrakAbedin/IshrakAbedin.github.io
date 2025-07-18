@@ -39,17 +39,21 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
     top: 60px;
     right: 20px;
     z-index: 1000;
-    padding: 1rem;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    color: var(--text);
+    width: 40px;
+    height: 40px;
+    background: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    color: var(--background);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* font-family: 'Courier New', monospace; */
     /* text-transform: uppercase; */
     /* letter-spacing: 1px; */
@@ -60,17 +64,6 @@ html {
     transform: translateY(-2px);
     /* animation: subtlePulse 1.0s ease-in-out infinite; */
     animation: borderFlow 1.0s ease-in-out infinite;
-}
-
-.theme-toggle::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    border: 1px solid var(--border);
-    pointer-events: none;
 }
 
 /* Existing animations */
@@ -194,31 +187,32 @@ html {
     margin: 15vh auto;
     padding: 20px;
     border: 1px solid var(--border);
+    border-radius: 16px;
     width: 80%;
 }
 
 
 .modal-close {
     position: absolute;
-    top: 4px;
-    right: 10px;
+    top: -0.25em;
+    right: 0px;
     z-index: 1000;
-    font-size: 2em;
+    font-size: 2.1em;
     align-items: center;
     justify-content: center;
     /* padding: 0.4rem; */
     /* background: var(--card-bg); */
     /* border: 1px solid var(--border); */
-    color: var(--text);
+    color: var(--accent);
     cursor: pointer;
     font-family: 'Courier New', monospace;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     transition: all 0.3s ease;
 }
 
 .modal-close:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) translateX(2px);
     /* animation: subtlePulse 1.0s ease-in-out infinite; */
     animation: borderFlow 1.0s ease-in-out infinite;
 }
@@ -280,6 +274,7 @@ header {
     text-align: center;
     position: relative;
     border: 1px solid var(--border);
+    border-radius: 16px;
     margin: 2rem;
     transition: all 0.3s ease;
 }
@@ -292,6 +287,7 @@ header::before {
     right: 0;
     bottom: 0;
     border: 1px solid var(--border);
+    border-radius: 12px;
     margin: 5px;
     pointer-events: none;
 }
@@ -310,6 +306,7 @@ header::before {
     height: 200px;
     object-fit: cover;
     border: 2px solid var(--border);
+    border-radius: 12px;
     position: relative;
     /* filter: sepia(20%); */
 }
@@ -322,6 +319,7 @@ header::before {
     right: -5px;
     bottom: -5px;
     border: 1px solid var(--border);
+    border-radius: 16px;
     animation: glitch 2s infinite;
 }
 
@@ -364,6 +362,7 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
+    border-radius: 8px;
 }
 
 nav a::before {
@@ -374,6 +373,7 @@ nav a::before {
     right: 0;
     bottom: 0;
     border: 1px solid var(--border);
+    border-radius: 8px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -398,6 +398,7 @@ section {
     background: var(--background);
     position: relative;
     border: 1px solid var(--border);
+    border-radius: 16px;
 }
 
 section::before {
@@ -408,6 +409,7 @@ section::before {
     right: 0;
     bottom: 0;
     border: 1px solid var(--border);
+    border-radius: 12px;
     margin: 5px;
     pointer-events: none;
 }
@@ -442,6 +444,7 @@ h2::after {
 .course-card {
     padding: 1.5rem;
     border: 1px solid var(--border);
+    border-radius: 12px;
     position: relative;
     transition: transform 0.3s;
     background: var(--background);
@@ -461,6 +464,7 @@ h2::after {
     right: 0;
     bottom: 0;
     border: 1px solid var(--border);
+    border-radius: 8px;
     margin: 5px;
     pointer-events: none;
 }
@@ -492,6 +496,7 @@ h2::after {
     padding: 1rem;
     text-align: center;
     border: 1px solid var(--border);
+    border-radius: 12px;
     position: relative;
     transition: transform 0.3s;
 
@@ -564,11 +569,13 @@ footer {
 
 ::-webkit-scrollbar-track {
     background: var(--background);
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--border);
     border: 1px solid var(--text);
+    border-radius: 4px;
 }
 
 @media (max-width: 768px) {
