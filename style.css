@@ -251,21 +251,21 @@ body::before {
     transition: all 0.3s ease;
 }
 
-body::after {
+/* body::after {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 100vh;
-    /* background: linear-gradient(transparent 50%, rgba(195, 181, 159, 0.025) 50%); */
+    background: linear-gradient(transparent 50%, rgba(195, 181, 159, 0.025) 50%);
     background: linear-gradient(transparent, var(--accent));
     background-size: 100% 0.5em;
     pointer-events: none;
     animation: scanline 15s linear infinite;
     opacity: 0.025;
     z-index: 999;
-}
+} */
 
 header {
     background-color: var(--nav-bg);
