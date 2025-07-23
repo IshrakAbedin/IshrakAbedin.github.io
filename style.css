@@ -221,6 +221,10 @@ html {
     display: none;
 }
 
+.modal-icon {
+    color: var(--accent);
+}
+
 
 * {
     margin: 0;
